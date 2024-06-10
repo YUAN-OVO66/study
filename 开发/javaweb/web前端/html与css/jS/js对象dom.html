@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="h1" src="C:\Users\LV\Desktop\YUAN\开发\javaweb\web前端\html与css\image\1.jpg" alt="">
+    <br><br>
+    <div class="cls">123</div><br>
+    <div class="cls">123</div><br>
+
+    <input type="checkbox" name="hobby">电影
+    <input type="checkbox" name="hobby">旅游
+    <input type="checkbox" name="hobby">游戏
+</body>
+<script>
+    //1.获取element元素
+    //1.1获取元素根据id获取
+    // var img=document.getElementById('h1');
+    // alert(img);
+    //1.2根据标签获取
+
+    // var divs=document.getElementsByTagName('div');
+    // for (let i = 0; i < divs.length; i++) {
+    //     alert(divs[i]);
+    // }
+
+    //1.3根据name属性获取
+    // var ins=document.getElementsByName('hobby');
+    // for (let i = 0; i < ins.length; i++) {
+    //     alert(ins[i])
+    // }
+
+    //1.4根据class属性获取
+    // var divs=document.getElementsByClassName('cls');
+    // for (let i = 0; i < divs.length; i++) {
+    //     alert(divs[i])
+    // }
+
+    //2.查询参考手册，属性，方法
+    var divs=document.getElementsByClassName('cls');
+    var div1=divs[0];
+    div1.innerHTML="666";
+</script>
+</html>

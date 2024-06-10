@@ -1,0 +1,37 @@
+h1{
+   /*  color: red; */
+   /* color: rgb(255, 0, 0); */
+   color: #ff0000;
+} 
+/* 元素选择器 */
+/* span{
+    color: #ff8800;
+} */
+
+/* 类选择器 */
+/* <span class="cls">2024年1月9日</span> */
+/* .cls{
+    color: #ff0000;
+} */
+
+/* id选择器 */
+#time{
+color: #ff0000;
+font-size: 12px;
+}
+
+a{
+    color:black;
+    text-decoration:none;/* 设置为一个标准文本 */
+}
+p{
+    text-indent:50px;/* 设置首行缩进 */
+    text-height:40px;/* 设置行高 */
+}
+#bj{
+    text-align: right;/* 对齐方式 */
+}
+#center{
+    width: 50%;
+    margin:auto ;/* 上右下左 （auto自动计算）*/
+}

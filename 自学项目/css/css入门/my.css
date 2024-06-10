@@ -1,0 +1,27 @@
+/* css代码 */
+/* 选择器{css属性} */
+h1{
+    color:red;
+}
+p{
+    color:red;
+    font-size:30px;/*字号*/
+}
+/* 类型选择器 */
+.color{
+    color: aquamarine;
+}
+.red{
+    color:red;
+}
+.size{
+    font-size: 50px;
+}
+/* id选择器 */
+#red{
+    color: red;
+}
+/* 通配符选择器 */
+*{
+    color: red;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+{{msg}}
+{{count}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script>
+    const app = new Vue({
+        // 通过el配置选择器
+        el:'#app',
+        // date提供渲染数据
+        data:{
+            msg:'牛魔酬宾',
+            count:666
+        }
+    }
+    )
+    </script>
+</body>
+</html>

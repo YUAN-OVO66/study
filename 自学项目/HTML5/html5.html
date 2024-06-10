@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video width="320" height="240" controls>
+        <source src="./HOYO-MiX-轻涟 La vaguelette(标清).mp4" type="video/mp4">
+      </video><br>
+      <audio controls>
+        <source src="./HOYO-MiX - 轻涟 La vaguelette.ogg" type="audio/ogg">
+      </audio>
+      <form action="demo-form.php">
+        选择你喜欢的颜色: <input type="color" name="favcolor"><br>
+      日期: <input type="date" name="bday"><br>
+      (日期和时间): <input type="datetime" name="bdaytime"><br>
+      (日期和时间): <input type="datetime-local" name="bdaytime"><br>
+        E-mail: <input type="email" name="usremail"><br>
+        电话号码: <input type="tel" name="usrtel"><br>
+        选择时间: <input type="time" name="usr_time"><br>
+        添加您的主页: <input type="url" name="homepage"><br>
+        选择周: <input type="week" name="week_year"><br>
+        数量 ( 1 到 5 之间): <input type="number" name="quantity" min="1" max="5"><br>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+            <input type="range" id="a" value="50">100 +
+            <input type="number" id="b" value="50">=
+            <output name="x" for="a b"></output>
+            </form>
+        <input type="submit"><br>
+<input list="browsers" name="browser">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<input type="submit"><br>
+    <form action="demo-form.php">
+    输入 1980-01-01 之前的日期:
+    <input type="date" name="bday" max="1979-12-31"><br>
+  
+   输入 2000-01-01 之后的日期:
+    <input type="date" name="bday" min="2000-01-02"><br>
+  
+    数量 (在1和5之间):
+    <input type="number" name="quantity" min="1" max="5"><br>
+    <input type="submit"><br>
+    <form action="demo-form.php" method="get">
+        Points: <input type="range" name="points" min="1" max="10">
+        <input type="submit">
+        </form><br>
+     <form action="demo-form.php">
+         Search Google: <input type="search" name="googlesearch"><br>
+         <input type="submit">
+         </form>
+</body>
+</html>
