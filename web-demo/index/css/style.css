@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.Div {
+    width: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: rgba(161, 181, 226, 0.651);
+    
+    border-radius: 5px;
+}
