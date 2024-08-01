@@ -1,4 +1,4 @@
-package com.example.springbootrequest.Pojo;
+package com.example.springbootrequest.pojo;
 
 /**
  * 统一响应结果封装类

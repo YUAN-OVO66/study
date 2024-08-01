@@ -1,4 +1,4 @@
-package com.example.springbootrequest.Pojo;
+package com.example.springbootrequest.pojo;
 
 public class Address {
     private String province;

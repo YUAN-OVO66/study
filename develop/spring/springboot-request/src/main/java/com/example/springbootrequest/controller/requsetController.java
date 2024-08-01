@@ -1,12 +1,11 @@
-package com.example.springbootrequest;
+package com.example.springbootrequest.controller;
 
-import com.example.springbootrequest.Pojo.Address;
-import com.example.springbootrequest.Pojo.Result;
-import com.example.springbootrequest.Pojo.User;
+import com.example.springbootrequest.pojo.Address;
+import com.example.springbootrequest.pojo.Result;
+import com.example.springbootrequest.pojo.User;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
