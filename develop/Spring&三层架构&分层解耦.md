@@ -233,3 +233,22 @@ Spring提供了以下几种解决方案：
 @Autowired + @Qualifier("bean的名称")
 @Resource(name="bean的名称")
 
+## Spring自动配置原理
+
+遵循约定大约配置的原则，在boot程序启动后，起步依赖中的一些bean对象会自动注入到ioc容器
+
+程序引入spring-boot-starter-web 起步依赖，启动后，会自动往ioc容器中注入DispatcherServlet
+
+---------------------
+
+在主启动类上添加了SpringBootApplication注解这个注解组合了EnableAutoConfiguration注解
+
+EnableAutoConfiguration注解又组合了Import注解,导入了AutoConfigurationImportSelector类
+
+实现selectImports方法,这个方法经过层层调用,最终会读取META-INF 目录下的 后缀名 为imorts的文件,当然了,boot2.7以前的版本,读取的是spring.factories文件,
+
+读取到全类名了之后,会解析注册条件,也就是@Conditional及其衍生注解,把满足注册条件的Bean对象自动注入到IOC容器中
+
+## 自定义Starter
+
+l在实际开发中，经常会定义一些公共组件，提供给各个项目团队使用。而在SpringBoot的项目中，一般会将这些公共组件封装为SpringBoot 的 starter。
