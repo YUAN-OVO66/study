@@ -1,55 +1,30 @@
-package com.example.springbootrequest.pojo;
+package com.example.big_event.pojo;
 
-/**
- * 统一响应结果封装类
- */
-public class Result {
-    private Integer code ;//1 成功 , 0 失败
-    private String msg; //提示信息
-    private Object data; //数据 data
 
-    public Result() {
-    }
-    public Result(Integer code, String msg, Object data) {
-        this.code = code;
-        this.msg = msg;
-        this.data = data;
-    }
-    public Integer getCode() {
-        return code;
-    }
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-    public String getMsg() {
-        return msg;
-    }
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-    public Object getData() {
-        return data;
-    }
-    public void setData(Object data) {
-        this.data = data;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//统一响应结果
+@NoArgsConstructor//无参构造方法
+@AllArgsConstructor//有参构造方法
+@Data
+public class Result<T> {
+    private Integer code;//业务状态码  0-成功  1-失败
+    private String message;//提示信息
+    private T data;//响应数据
+
+    //快速返回操作成功响应结果(带响应数据)
+    public static <E> Result<E> success(E data) {
+        return new Result<>(0, "操作成功", data);
     }
 
-    public static Result success(Object data){
-        return new Result(1, "success", data);
-    }
-    public static Result success(){
-        return new Result(1, "success", null);
-    }
-    public static Result error(String msg){
-        return new Result(0, msg, null);
+    //快速返回操作成功响应结果
+    public static Result success() {
+        return new Result(0, "操作成功", null);
     }
 
-    @Override
-    public String toString() {
-        return "Result{" +
-                "code=" + code +
-                ", msg='" + msg + '\'' +
-                ", data=" + data +
-                '}';
+    public static Result error(String message) {
+        return new Result(1, message, null);
     }
 }
