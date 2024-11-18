@@ -1,46 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <winsock2.h>
-#include <ws2tcpip.h>
-#include <windows.h>
-#include <time.h>
-#include <pthread.h>
-
-#pragma comment(lib, "Ws2_32.lib") // 链接 Winsock 库
-
-#define PORT 8888
-#define MAXMEM 20
-#define MAXROOM 5
-#define BUFFSIZE 256
-
-int user_count;     // 记录总的用户数
-int chatroom_count; // 记录聊天室个数
-SOCKET listenfd, connfd[MAXMEM];
-struct user users[MAXMEM];               // 记录所有用户
-struct user_socket online_users[MAXMEM]; // 记录在线用户
-struct chatroom chatrooms[MAXROOM];      // 记录聊天室
-
-// 函数声明
-void init();
-void quit();
-void save_users();
-void register_user(int n);
-void rcv_snd(int p);
-void quit_client(int n);
-int user_login(int n);
-void get_help();
-void send_private_msg(char *username, char *data, SOCKET sfd);
-void send_all_msg(char *msg, SOCKET sfd);
-void get_online_users(SOCKET sfd);
-void send_chatroom_msg(char *msg, SOCKET sfd);
-void create_chatroom(char *name, char *passwd, SOCKET sfd);
-void join_chatroom(char *name, char *passwd, SOCKET sfd);
-void get_online_chatrooms(SOCKET sfd);
-void change_passwd(SOCKET sfd, char *passwd);
-void get_inroom_users(SOCKET sfd);
-void exit_chatroom(SOCKET sfd);
-void invalid_command(SOCKET sfd);
 #include "server.h"
 
 int main()
@@ -131,10 +88,6 @@ int main()
         pthread_create(&recv_thread, NULL, (void *)(&rcv_snd), (void *)i);
     }
 
-    // 清理 Winsock
-    WSACleanup();
-
-    return 0;
 }
 
 
@@ -151,7 +104,7 @@ void rcv_snd(int n)
     // 第一个循环，用于接收和处理登录或注册命令
     while (1)
     {
-        len = recv(connfd[n], buf, BUFFSIZE);
+        len = recv(connfd[n], buf, BUFFSIZE,0);
         if (len > 0)
         {
             buf[len - 1] = '\0'; // 去除换行符
@@ -181,7 +134,7 @@ void rcv_snd(int n)
     // 第二个循环，用于处理登录后的命令
     while (1)
     {
-        if ((len = recv(connfd[n], temp, BUFFSIZE)) > 0)
+        if ((len = recv(connfd[n], temp, BUFFSIZE,0)) > 0)
         {
             temp[len - 1] = '\0'; // 去除换行符
             sscanf(temp, "%s %s %[^\n]", command, arg1, arg2); // 解析命令
@@ -355,10 +308,10 @@ int user_login(int n)
 
     // 提示用户输入用户名
     sprintf(buf, "Your username: ");
-    send(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
 
     // 读取用户名
-    len = recv(connfd[n], username, 20);
+    len = recv(connfd[n], username, 20,0);
     if (len > 0)
     {
         username[len - 1] = '\0'; // 去除换行符
@@ -366,10 +319,10 @@ int user_login(int n)
 
     // 提示用户输入密码
     sprintf(buf, "Your password: ");
-    send(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
 
     // 读取密码
-    len = recv(connfd[n], password, 20);
+    len = recv(connfd[n], password, 20,0);
     if (len > 0)
     {
         password[len - 1] = '\0'; // 去除换行符
@@ -384,7 +337,7 @@ int user_login(int n)
             if (strcmp(password, users[i].password) == 0)
             {
                 sprintf(buf, "Login successfully.\n\n");
-                write(connfd[n], buf, strlen(buf));
+                send(connfd[n], buf, strlen(buf),0);
 
                 // 查找第一个空闲的位置并将用户标记为在线
                 for (j = 0; j < MAXMEM; j++)
@@ -403,7 +356,7 @@ int user_login(int n)
             {
                 // 密码错误
                 sprintf(buf, "Wrong password.\n\n");
-                write(connfd[n], buf, strlen(buf));
+                send(connfd[n], buf, strlen(buf),0);
                 return -1;  // 密码错误
             }
         }
@@ -411,7 +364,7 @@ int user_login(int n)
 
     // 用户名不存在
     sprintf(buf, "Account does not exist.\n\n");
-    write(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
     return -1;  // 用户名不存在
 }
 
@@ -423,10 +376,10 @@ void register_user(int n)
 
     // 提示用户输入用户名
     sprintf(buf, "Your username: ");
-    send(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
 
     // 读取用户名
-    len = recv(connfd[n], username, 20);
+    len = recv(connfd[n], username, 20,0);
     if (len > 0)
     {
         username[len - 1] = '\0'; // 去除换行符
@@ -434,10 +387,10 @@ void register_user(int n)
 
     // 提示用户输入密码
     sprintf(buf, "Your password: ");
-    send(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
 
     // 读取密码
-    len = recv(connfd[n], password, 20);
+    len = recv(connfd[n], password, 20,0);
     if (len > 0)
     {
         password[len - 1] = '\0'; // 去除换行符
@@ -449,7 +402,7 @@ void register_user(int n)
         if (strcmp(users[i].username, username) == 0)
         {
             sprintf(buf, "The username already exists.\n\n");
-            write(connfd[n], buf, strlen(buf));
+            send(connfd[n], buf, strlen(buf),0);
             return;
         }
     }
@@ -458,7 +411,7 @@ void register_user(int n)
     if (user_count >= MAXMEM)
     {
         sprintf(buf, "User registration limit reached.\n\n");
-        write(connfd[n], buf, strlen(buf));
+        send(connfd[n], buf, strlen(buf),0);
         return;
     }
 
@@ -469,7 +422,7 @@ void register_user(int n)
 
     // 返回注册成功信息
     sprintf(buf, "Account created successfully.\n\n");
-    write(connfd[n], buf, strlen(buf));
+    send(connfd[n], buf, strlen(buf),0);
 }
 
 /*用户发送私聊信息*/
@@ -500,9 +453,9 @@ void send_private_msg(char *username, char *data, SOCKET sfd)
         if (strcmp(username, online_users[i].username) == 0)
         {
             snprintf(buf, sizeof(buf), "%s\tfrom %s:\n%s\n", nowtime, send_man, data);
-            send(connfd[online_users[i].socketfd], buf, strlen(buf) + 1);  // 发送私聊消息
+            send(connfd[online_users[i].socketfd], buf, strlen(buf) + 1,0);  // 发送私聊消息
             strcpy(temp, "Sent successfully.\n");
-            send(connfd[sfd], temp, strlen(temp) + 1);  // 发送成功回执
+            send(connfd[sfd], temp, strlen(temp) + 1,0);  // 发送成功回执
             found = 1;
             break;
         }
@@ -512,7 +465,7 @@ void send_private_msg(char *username, char *data, SOCKET sfd)
     if (!found)
     {
         strcpy(buf, "User is not online or user does not exist.\n");
-        send(connfd[sfd], buf, strlen(buf) + 1);  // 返回错误消息给发送者
+        send(connfd[sfd], buf, strlen(buf) + 1,0);  // 返回错误消息给发送者
     }
 }
 
@@ -544,13 +497,13 @@ void send_all_msg(char *msg, SOCKET sfd)
     {
         if (connfd[i] != -1 && i != sfd)  // 确保连接有效且不是发送者自己
         {
-            send(connfd[i], buf, strlen(buf) + 1);  // 发送消息
+            send(connfd[i], buf, strlen(buf) + 1,0);  // 发送消息
         }
     }
 
     // 向发送者返回发送成功的回执
     snprintf(temp, sizeof(temp), "Sent successfully\n");
-    send(connfd[sfd], temp, strlen(temp) + 1);
+    send(connfd[sfd], temp, strlen(temp) + 1,0);
 }
 
 void get_online_users(SOCKET sfd)
@@ -575,7 +528,7 @@ void get_online_users(SOCKET sfd)
     }
 
     // 发送给请求的客户端
-    send(connfd[sfd], buf, strlen(buf) + 1);
+    send(connfd[sfd], buf, strlen(buf) + 1,0);
 }
 
 //发送消息到聊天室
@@ -611,7 +564,7 @@ void send_chatroom_msg(char *msg, SOCKET sfd)
     {
         // 用户未加入聊天室
         strcpy(buf, "You have not joined the chat room.\n");
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
     }
     else
     {
@@ -631,7 +584,7 @@ void send_chatroom_msg(char *msg, SOCKET sfd)
         {
             if (chatrooms[i].user[k] != -1)
             {
-                send(connfd[chatrooms[i].user[k]], buf, strlen(buf) + 1);
+                send(connfd[chatrooms[i].user[k]], buf, strlen(buf) + 1,0);
             }
         }
     }
@@ -654,7 +607,7 @@ void create_chatroom(char *name, char *passwd, SOCKET sfd)
     {
         // 如果没有空闲的聊天室，返回错误信息
         strcpy(buf, "No available rooms to create.\n");
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
         return;
     }
 
@@ -675,7 +628,7 @@ void create_chatroom(char *name, char *passwd, SOCKET sfd)
 
     // 通知用户聊天室创建成功
     snprintf(buf, sizeof(buf), "Successfully created chat room '%s'.\n", chatrooms[i].name);
-    send(connfd[sfd], buf, strlen(buf) + 1);
+    send(connfd[sfd], buf, strlen(buf) + 1,0);
 }
 
 void join_chatroom(char *name, char *passwd, SOCKET sfd)
@@ -702,7 +655,7 @@ void join_chatroom(char *name, char *passwd, SOCKET sfd)
     if (room_found != -1)
     {
         snprintf(buf, sizeof(buf), "You have already joined the chat room '%s'.\n", chatrooms[room_found].name);
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
         return;  // 用户已经加入过聊天室，直接返回
     }
 
@@ -720,20 +673,20 @@ void join_chatroom(char *name, char *passwd, SOCKET sfd)
                     {
                         chatrooms[i].user[j] = sfd;
                         snprintf(buf, sizeof(buf), "Successfully joined the chat room '%s'.\n", chatrooms[i].name);
-                        send(connfd[sfd], buf, strlen(buf) + 1);
+                        send(connfd[sfd], buf, strlen(buf) + 1,0);
                         return;  // 成功加入聊天室
                     }
                 }
                 // 如果聊天室已满
                 snprintf(buf, sizeof(buf), "Chat room '%s' is full.\n", chatrooms[i].name);
-                send(connfd[sfd], buf, strlen(buf) + 1);
+                send(connfd[sfd], buf, strlen(buf) + 1,0);
                 return;
             }
             else
             {
                 // 密码错误
                 snprintf(buf, sizeof(buf), "Incorrect password for chat room '%s'.\n", name);
-                send(connfd[sfd], buf, strlen(buf) + 1);
+                send(connfd[sfd], buf, strlen(buf) + 1,0);
                 return;
             }
         }
@@ -741,7 +694,7 @@ void join_chatroom(char *name, char *passwd, SOCKET sfd)
 
     // 如果没有找到该聊天室
     snprintf(buf, sizeof(buf), "Chat room '%s' does not exist.\n", name);
-    send(connfd[sfd], buf, strlen(buf) + 1);
+    send(connfd[sfd], buf, strlen(buf) + 1,0);
 }
 
 //获取聊天室信息
@@ -765,7 +718,7 @@ void get_online_chatrooms(SOCKET sfd)
         }
     }
 
-    send(connfd[sfd], buf, strlen(buf) + 1);
+    send(connfd[sfd], buf, strlen(buf) + 1,0);
 }
 
 //修改密码
@@ -793,7 +746,7 @@ void change_passwd(SOCKET sfd, char *passwd)
             strncpy(users[i].password, passwd, sizeof(users[i].password) - 1);
             users[i].password[sizeof(users[i].password) - 1] = '\0';  // 确保字符串终止
             snprintf(buf, sizeof(buf), "Password has been updated for user: %s\n", name);
-            send(connfd[sfd], buf, strlen(buf) + 1);
+            send(connfd[sfd], buf, strlen(buf) + 1,0);
             break;
         }
     }
@@ -829,7 +782,7 @@ void get_inroom_users(SOCKET sfd)
     if (room == -1)
     {
         snprintf(buf, sizeof(buf), "Sorry, you have not joined any chat room.\n");
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
     }
     else
     {
@@ -851,7 +804,7 @@ void get_inroom_users(SOCKET sfd)
                 }
             }
         }
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
     }
 }
 
@@ -885,12 +838,12 @@ void exit_chatroom(SOCKET sfd)
     if (room == -1)
     {
         snprintf(buf, sizeof(buf), "You have not joined any chat room.\n");
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
     }
     else
     {
         snprintf(buf, sizeof(buf), "Successfully quit chat room %s.\n", chatrooms[room].name);
-        send(connfd[sfd], buf, strlen(buf) + 1);
+        send(connfd[sfd], buf, strlen(buf) + 1,0);
     }
 }
 
@@ -939,7 +892,7 @@ void invalid_command(SOCKET sfd)
     strcat(buf, "/exit - Exit the chat room\n");
     strcat(buf, "/quit - Quit the server\n");
 
-    send(connfd[sfd], buf, strlen(buf) + 1);
+    send(connfd[sfd], buf, strlen(buf) + 1,0);
 }
 
 
