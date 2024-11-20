@@ -1,149 +1,149 @@
-<mxfile host="Electron" modified="2024-11-12T09:05:14.984Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="NmNdwZuNcZf3EWN6xI84" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2024-11-20T11:38:09.281Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="zK2GDAaggw4XZGvgyj_z" version="22.1.2" type="device">
   <diagram name="第 1 页" id="zGEOmpZWU3tEoxPUaqe9">
-    <mxGraphModel dx="2074" dy="1196" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1548" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-1" value="c语言即时聊天系统" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="340" width="140" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-1" value="c语言即时聊天系统" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="370" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-4" value="服务端" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="170" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-4" value="服务端" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="200" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-5" value="客户端" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-5" value="客户端" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="540" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-180;" vertex="1" parent="1">
-          <mxGeometry x="220" y="200" width="30" height="340" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-180;" parent="1" vertex="1">
+          <mxGeometry x="220" y="230" width="30" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-17" value="配置ip+端口" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-17" value="配置ip+端口" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="30" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-17">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="300" as="sourcePoint" />
-            <mxPoint x="580" y="250" as="targetPoint" />
+            <mxPoint x="530" y="330" as="sourcePoint" />
+            <mxPoint x="580" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-20">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-20" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="300" as="sourcePoint" />
-            <mxPoint x="440" y="160" as="targetPoint" />
+            <mxPoint x="530" y="330" as="sourcePoint" />
+            <mxPoint x="440" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-20" value="监听来自客户端请求" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="80" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-20" value="监听来自客户端请求" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="110" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-22">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-22" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="300" as="sourcePoint" />
-            <mxPoint x="440" y="230" as="targetPoint" />
+            <mxPoint x="530" y="330" as="sourcePoint" />
+            <mxPoint x="440" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-22" value="建立连接" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="160" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-22" value="建立连接" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="190" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-25" value="通讯交换数据" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="240" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-25" value="通讯交换数据" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-25">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-4" target="Qgixmg4nz-Rdwc6t9vPS-25" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="300" as="sourcePoint" />
-            <mxPoint x="580" y="250" as="targetPoint" />
+            <mxPoint x="530" y="330" as="sourcePoint" />
+            <mxPoint x="580" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-27" value="配置ip+端口" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="460" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-27" value="配置ip+端口" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="490" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-27">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-28" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-27" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="370" y="546" as="sourcePoint" />
-            <mxPoint x="580" y="616" as="targetPoint" />
+            <mxPoint x="370" y="576" as="sourcePoint" />
+            <mxPoint x="580" y="646" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-30">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-30" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="370" y="546" as="sourcePoint" />
-            <mxPoint x="440" y="476" as="targetPoint" />
+            <mxPoint x="370" y="576" as="sourcePoint" />
+            <mxPoint x="440" y="506" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-30" value="发送连接到服务端" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="540" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-30" value="发送连接到服务端" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="570" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-32" value="通讯交换数据" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="620" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-32" value="通讯交换数据" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="650" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-32">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="Qgixmg4nz-Rdwc6t9vPS-32" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="370" y="546" as="sourcePoint" />
-            <mxPoint x="580" y="306" as="targetPoint" />
+            <mxPoint x="370" y="576" as="sourcePoint" />
+            <mxPoint x="580" y="336" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.999;exitY=0.631;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.013;entryY=0.445;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-5" target="Qgixmg4nz-Rdwc6t9vPS-35">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.999;exitY=0.631;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.013;entryY=0.445;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-5" target="Qgixmg4nz-Rdwc6t9vPS-35" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="530" y="470" as="sourcePoint" />
-            <mxPoint x="440" y="390" as="targetPoint" />
+            <mxPoint x="530" y="500" as="sourcePoint" />
+            <mxPoint x="440" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-35" value="配置用户" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="380" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-35" value="配置用户" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="410" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-36" value="需求分析" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="660" y="340" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-36" value="需求分析" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-38" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
-          <mxGeometry x="780" y="140" width="50" height="460" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-38" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="1070" width="50" height="460" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-39" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
-          <mxGeometry x="830" y="90" width="50" height="100" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-39" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1020" width="50" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-41" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
-          <mxGeometry x="830" y="550" width="50" height="100" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-41" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1480" width="50" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-42" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
-          <mxGeometry x="830" y="320" width="50" height="100" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-42" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1250" width="50" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-45" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.471;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-42" target="Qgixmg4nz-Rdwc6t9vPS-38">
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-45" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.471;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" parent="1" source="Qgixmg4nz-Rdwc6t9vPS-42" target="Qgixmg4nz-Rdwc6t9vPS-38" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="880" y="330" as="sourcePoint" />
-            <mxPoint x="930" y="280" as="targetPoint" />
+            <mxPoint x="300" y="1260" as="sourcePoint" />
+            <mxPoint x="350" y="1210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-46" value="用户注册与登录" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="60" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-46" value="用户注册与登录" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="990" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-47" value="实时消息传递" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="160" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-47" value="实时消息传递" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1090" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-48" value="在线用户列表" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="290" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-48" value="在线用户列表" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1220" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-49" value="私聊功能" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="390" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-49" value="私聊功能" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1320" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-50" value="系统通知" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="520" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-50" value="系统通知" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1450" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-51" value="退出聊天室" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="880" y="620" width="120" height="60" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-51" value="退出聊天室" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1550" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-59" value="&lt;ul&gt;&lt;li&gt;用户首次进入聊天室需输入用户名。&lt;br&gt;&lt;/li&gt;&lt;li&gt;用户名需唯一，不可重复，防止重名用户混淆。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="50" width="310" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-59" value="&lt;ul&gt;&lt;li&gt;用户首次进入聊天室需输入用户名。&lt;br&gt;&lt;/li&gt;&lt;li&gt;用户名需唯一，不可重复，防止重名用户混淆。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="980" width="310" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-60" value="&lt;ul&gt;&lt;li&gt;用户可以在聊天室中发送文本消息，服务器将该消息广播给所有在线用户。&lt;br&gt;&lt;/li&gt;&lt;li&gt;支持群聊模式：所有在线用户都能看到每个用户发送的消息。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="150" width="450" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-60" value="&lt;ul&gt;&lt;li&gt;用户可以在聊天室中发送文本消息，服务器将该消息广播给所有在线用户。&lt;br&gt;&lt;/li&gt;&lt;li&gt;支持群聊模式：所有在线用户都能看到每个用户发送的消息。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1080" width="450" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-61" value="&lt;ul&gt;&lt;li&gt;用户可以查看当前聊天室的在线用户列表&lt;br&gt;&lt;/li&gt;&lt;li&gt;实时更新用户上线、下线的状态。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="280" width="450" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-61" value="&lt;ul&gt;&lt;li&gt;用户可以查看当前聊天室的在线用户列表&lt;br&gt;&lt;/li&gt;&lt;li&gt;实时更新用户上线、下线的状态。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1210" width="450" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-62" value="&lt;ul&gt;&lt;li&gt;用户可以选择在线用户进行私聊，只对指定用户发送消息，其他用户无法看到。&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="380" width="480" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-62" value="&lt;ul&gt;&lt;li&gt;用户可以选择在线用户进行私聊，只对指定用户发送消息，其他用户无法看到。&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1310" width="480" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-63" value="&lt;ul&gt;&lt;li&gt;当有用户加入或离开聊天室时，系统应发送通知消息，告知所有用户。&lt;br&gt;&lt;/li&gt;&lt;li&gt;包括提示用户注册成功、登录成功、用户上线、用户下线等。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="510" width="450" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-63" value="&lt;ul&gt;&lt;li&gt;当有用户加入或离开聊天室时，系统应发送通知消息，告知所有用户。&lt;br&gt;&lt;/li&gt;&lt;li&gt;包括提示用户注册成功、登录成功、用户上线、用户下线等。&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1440" width="450" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-64" value="&lt;ul&gt;&lt;li&gt;用户可以随时选择退出聊天室，并向其他用户广播通知。&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
-          <mxGeometry x="980" y="610" width="450" height="80" as="geometry" />
+        <mxCell id="Qgixmg4nz-Rdwc6t9vPS-64" value="&lt;ul&gt;&lt;li&gt;用户可以随时选择退出聊天室，并向其他用户广播通知。&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="400" y="1540" width="450" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
