@@ -1,26 +1,26 @@
 #include "client.h"
 
 int main() {
-    HANDLE thread; // Windows 线程句柄
-    struct sockaddr_in serv_addr;
-    char buf[BUFFSIZE], temp[BUFFSIZE];
+    HANDLE ljlThread; // Windows 线程句柄
+    struct sockaddr_in ljlServAddr;
+    char ljlBuf[BUFFSIZE], ljlTemp[BUFFSIZE];
 
     // 初始化 Winsock 库
-    WSADATA wsaData;
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+    WSADATA ljlWsaData;
+    if (WSAStartup(MAKEWORD(2, 2), &ljlWsaData) != 0) {
         printf("WSAStartup failed\n");
         return 1;
     }
 
     // 初始化服务端地址结构
-    ZeroMemory(&serv_addr, sizeof(serv_addr));
-    serv_addr.sin_family = AF_INET;
-    serv_addr.sin_port = htons(PORT);
-    inet_pton(AF_INET, HOST_IP, &serv_addr.sin_addr);
+    ZeroMemory(&ljlServAddr, sizeof(ljlServAddr));
+    ljlServAddr.sin_family = AF_INET;
+    ljlServAddr.sin_port = htons(PORT);
+    inet_pton(AF_INET, HOST_IP, &ljlServAddr.sin_addr);
 
     // 创建客户端套接字
-    sockfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sockfd == INVALID_SOCKET) {
+    ljlSockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (ljlSockfd == INVALID_SOCKET) {
         printf("Socket creation failed\n");
         WSACleanup();
         return 1;
@@ -28,9 +28,9 @@ int main() {
 
     // 与服务器建立连接
     printf("connecting... \n");
-    if (connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
+    if (connect(ljlSockfd, (struct sockaddr *)&ljlServAddr, sizeof(ljlServAddr)) == SOCKET_ERROR) {
         printf("Connection failed\n");
-        closesocket(sockfd);
+        closesocket(ljlSockfd);
         WSACleanup();
         return 1;
     }
@@ -42,41 +42,41 @@ int main() {
 
     /* === 从此处开始 程序分做两个线程 === */
     // 创建发送消息的线程
-    thread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)snd, NULL, 0, NULL);
-    if (thread == NULL) {
+    ljlThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)ljlSnd, NULL, 0, NULL);
+    if (ljlThread == NULL) {
         printf("Thread creation failed\n");
-        closesocket(sockfd);
+        closesocket(ljlSockfd);
         WSACleanup();
         return 1;
     }
 
     // 接收消息的线程
     while (1) {
-        int len;
-        if ((len = recv(sockfd, buf, BUFFSIZE, 0)) > 0) { // recv 读取通信套接字
-            buf[len] = '\0'; // 添加字符串结束符
-            printf("%s\n", buf);
+        int ljlLen;
+        if ((ljlLen = recv(ljlSockfd, ljlBuf, BUFFSIZE, 0)) > 0) { // recv 读取通信套接字
+            ljlBuf[ljlLen] = '\0'; // 添加字符串结束符
+            printf("%s\n", ljlBuf);
         }
     }
 
-    closesocket(sockfd);
+    closesocket(ljlSockfd);
     WSACleanup();
     return 0;
 }
 
 /*发送消息的函数*/
-void snd() {
-    char buf[BUFFSIZE];
+void ljlSnd() {
+    char ljlBuf[BUFFSIZE];
     while (1) {
-        fgets(buf, BUFFSIZE, stdin);
-        if (strcmp(buf, "help\n") == 0) {
-            get_help();
+        fgets(ljlBuf, BUFFSIZE, stdin);
+        if (strcmp(ljlBuf, "help\n") == 0) {
+            ljlGetHelp();
             continue;
         }
-        if (strcmp(buf, "\n") != 0)
-            send(sockfd, buf, strlen(buf), 0);
-        if (strcmp(buf, "quit\n") == 0) {
-            closesocket(sockfd); // 关闭套接字
+        if (strcmp(ljlBuf, "\n") != 0)
+            send(ljlSockfd, ljlBuf, strlen(ljlBuf), 0);
+        if (strcmp(ljlBuf, "quit\n") == 0) {
+            closesocket(ljlSockfd); // 关闭套接字
             WSACleanup();
             exit(0);
         }
@@ -84,7 +84,7 @@ void snd() {
 }
 
 /*获取帮助信息*/
-void get_help() {
+void ljlGetHelp() {
     printf("Commands introduction:\n");
     printf("\t'ls -users':\t\tShow all online users\n");
     printf("\t'ls -chatrooms':\tShow all chat rooms\n");
@@ -101,4 +101,3 @@ void get_help() {
     printf("\t'quit':\t\t\tExit chat system\n");
     printf("\t'help':\t\t\tGet more help information\n\n");
 }
-

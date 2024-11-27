@@ -11,6 +11,6 @@
 
 #pragma comment(lib, "Ws2_32.lib")
 
-SOCKET sockfd;
-void snd();
-void get_help();
+SOCKET ljlSockfd;
+void ljlSnd();
+void ljlGetHelp();
