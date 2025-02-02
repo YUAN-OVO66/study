@@ -1,0 +1,247 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "id": 1,
+            "title": "全部",
+            "data": [
+                {
+                    "name": "文创类",
+                    "list": [
+                        {
+                            "id": 1,
+                            "name": "周边1",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 2,
+                            "name": "周边2",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 3,
+                            "name": "周边3",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 4,
+                            "name": "周边4",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        }
+                    ]
+                },
+                {
+                    "name": "彩石类",
+                    "list": [
+                        {
+                            "id": 1,
+                            "name": "周边1",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 2,
+                            "name": "周边2",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 3,
+                            "name": "周边3",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 4,
+                            "name": "周边4",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        }
+                    ]
+                },
+                {
+                    "name": "林园绿化类",
+                    "list": [
+                        {
+                            "id": 1,
+                            "name": "周边1",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 2,
+                            "name": "周边2",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 3,
+                            "name": "周边3",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 4,
+                            "name": "周边4",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        }
+                    ]
+                },
+                {
+                    "name": "首饰类",
+                    "list": [
+                        {
+                            "id": 1,
+                            "name": "周边1",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 2,
+                            "name": "周边2",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 3,
+                            "name": "周边3",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        },
+                        {
+                            "id": 4,
+                            "name": "周边4",
+                            "imgUrl": "../../static/logo.png",
+                            "price": "100$"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "文创周边",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "周边1",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 2,
+                    "name": "周边2",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 3,
+                    "name": "周边3",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 4,
+                    "name": "周边4",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "彩石类",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "周边1",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 2,
+                    "name": "周边2",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 3,
+                    "name": "周边3",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 4,
+                    "name": "周边4",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "园林绿化类",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "周边1",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 2,
+                    "name": "周边2",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 3,
+                    "name": "周边3",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 4,
+                    "name": "周边4",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "首饰类",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "周边1",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 2,
+                    "name": "周边2",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 3,
+                    "name": "周边3",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                },
+                {
+                    "id": 4,
+                    "name": "周边4",
+                    "imgUrl": "../../static/logo.png",
+                    "price": "100$"
+                }
+            ]
+        }
+    ]
+}
